@@ -26,13 +26,14 @@ Here's a simple example to generate a weighted configuration model using the pac
 
 ```python
 import networkx as nx
-from weighted_config import ScipyOptimizationGenerator
+from weighted_config.config_models import ScipyOptimizeConfigurationModelGenerator
+from weighted_config.utils import GraphGenerator
 
 # Create a fully connected weighted networkx graph (input_graph)
-# ...
+input_graph = GraphGenerator().good_graph(n_nodes=10)
 
 # Generate a graph using SciPy optimization
-config_model_generator = ScipyOptimizationGenerator(input_graph, method='L-BFGS-B')
+config_model_generator = ScipyOptimizeConfigurationModelGenerator(input_graph, method='L-BFGS-B')
 generated_graph_scipy = config_model_generator.generate()
 
 ```
