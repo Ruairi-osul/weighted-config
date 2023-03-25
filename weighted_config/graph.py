@@ -4,7 +4,15 @@ from typing import Any
 
 
 class FullyConnectedGraph:
+    """
+    A fully connected graph with weights on all edges. Must have 'weight' attribute.
+    """
+
     def __init__(self, input_graph: nx.Graph):
+        """
+
+        :param input_graph: A networkx graph with 'weight' attribute for all edges.
+        """
         if not self.is_fully_connected(input_graph):
             raise ValueError("The input graph is not fully connected.")
         if not self.has_weights(input_graph):
