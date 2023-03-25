@@ -14,7 +14,8 @@
 		"vscode": {
 			"extensions": [
 				"GitHub.copilot",
-				"ms-python.python"
+				"ms-python.python",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	},
