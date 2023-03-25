@@ -5,6 +5,34 @@ from .graph import FullyConnectedGraph
 
 
 class ConfigurationModelGenerator:
+    """
+    Abstract class for generating configuration models for a given graph.
+
+    Parameters
+    ----------
+    :param graph: nx.Graph
+        The graph to generate a configuration model for.
+
+    Attributes
+    ----------
+    :param graph: nx.Graph
+        The graph to generate a configuration model for.
+    :param input_graph_edges: list
+        The edges of the input graph.
+    :param input_strength_distribution: np.array
+        The strength distribution of the input graph.
+
+    Methods
+    -------
+    :method generate: nx.Graph
+        Generate a configuration model for the input graph.
+    :method gen_graph_from_weights: nx.Graph
+        Generate a graph from a list of edge weights.
+    :method objective_function: float
+        The objective function to minimize.
+
+    """
+
     def __init__(self, graph: nx.Graph):
         self.graph = FullyConnectedGraph(graph)
         self.input_graph_edges = self.graph.graph.edges()
