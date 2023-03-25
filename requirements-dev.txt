@@ -1,0 +1,7 @@
+scipy
+numpy
+networkx
+deap
+black
+mypy
+pytest
