@@ -1,11 +1,6 @@
-import networkx as nx
 import numpy as np
-import pytest
-from itertools import combinations
-from weighted_config.graph import FullyConnectedGraph
 from weighted_config.config_models import ScipyOptimizeConfigurationModelGenerator
-from .test_graph import GraphGenerator
-from networkx.algorithms.isomorphism import GraphMatcher
+from weighted_config.utils import GraphGenerator
 
 
 class TestScipyConfigModel:
