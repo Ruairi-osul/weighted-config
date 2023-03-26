@@ -5,3 +5,4 @@ deap
 black
 mypy
 pytest
+numba
