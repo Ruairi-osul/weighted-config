@@ -21,7 +21,7 @@ class FullyConnectedGraph:
 
     @property
     def number_of_nodes(self) -> int:
-        return self.graph.number_of_nodes()
+        return nx.number_of_nodes(self.graph)
 
     @property
     def adjacency_matrix(self) -> np.ndarray:
@@ -52,8 +52,8 @@ class FullyConnectedGraph:
 
     @staticmethod
     def is_fully_connected(graph: nx.Graph) -> bool:
-        N = graph.number_of_nodes()
-        E = graph.number_of_edges()
+        N = nx.number_of_nodes(graph)
+        E = nx.number_of_edges(graph)
         return E == N * (N - 1) // 2
 
     @staticmethod
