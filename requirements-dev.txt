@@ -5,3 +5,5 @@ deap
 black
 mypy
 pytest
+numba
+matplotlib
