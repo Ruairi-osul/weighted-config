@@ -129,6 +129,7 @@ class ScipyOptimizeConfigurationModelGenerator(ConfigurationModelGenerator):
         )
         if "maxiter" not in self.optimize_options and self.maxiter is not None:
             self.optimize_options["maxiter"] = self.maxiter
+        self.result_ = None
 
     def generate(self) -> nx.Graph:
         num_nodes = self.graph.number_of_nodes

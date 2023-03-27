@@ -7,3 +7,5 @@ mypy
 pytest
 numba
 matplotlib
+sphinx
+sphinx_rtd_theme
